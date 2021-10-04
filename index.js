@@ -4,7 +4,7 @@ const app = express()
 
 function getUrlInText(text) {
   const urlRegex = /(https?:\/\/[^\s]+)/g
-  return text.match(urlRegex)
+  return text.match(urlRegex)[0]
 }
 
 app.get("/url", (req, res) => {
