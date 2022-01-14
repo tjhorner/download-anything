@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN apk update
 RUN apk add python3 py3-pip
-RUN pip install youtube-dl
+RUN pip install yt-dlp
 
 COPY package*.json ./
 RUN npm install

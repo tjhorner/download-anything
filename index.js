@@ -11,7 +11,7 @@ app.get("/url", (req, res) => {
   const url = getUrlInText(req.query.text)
   
   // TODO: probably very vulnerable! no bueno. but is ok :)
-  const command = `youtube-dl --dump-json ${url.split(" ").join("%20")}`
+  const command = `yt-dlp --dump-json ${url.split(" ").join("%20")}`
   childProcess.exec(command, (error, stdout, stderr) => {
     if (error) {
       console.log(error)
